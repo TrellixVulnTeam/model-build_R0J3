@@ -110,7 +110,7 @@ if __name__ == "__main__":
 
     logger.info("Splitting %d rows of data into train, validation, test datasets.", len(X))
     np.random.shuffle(X)
-    train, validation, test = np.split(X, [int(0.7 * len(X)), int(0.85 * len(X))])
+    train, validation, test = np.split(X, [int(0.7 * len(X)), int(0.80 * len(X))])
 
     logger.info("Writing out datasets to %s.", base_dir)
     pd.DataFrame(train).to_csv(f"{base_dir}/train/train.csv", header=False, index=False)
